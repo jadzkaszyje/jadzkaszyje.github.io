@@ -1,0 +1,227 @@
+/* --- style.css - PEŁNY KOD Z POPRAWIONYMI PODPISAMI W GALERII --- */
+
+/* Ustawienia bazowe i czcionki */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333; 
+}
+
+/* NOWOŚĆ: KOLOROWE TŁO DLA GŁÓWNEJ TREŚCI */
+main {
+    padding: 20px;
+    background-color: #fcf8e3; 
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    text-align: center; 
+}
+
+/* 1. STYLIZACJA NAGŁÓWKA GŁÓWNEGO (HERO) */
+.hero {
+    background-color: #fce4ec; 
+    padding: 60px 20px;
+    text-align: center; 
+    color: #4a148c; 
+}
+
+/* STYL DLA LOGO */
+.main-logo {
+    width: 150px; 
+    height: auto;
+    display: block; 
+    margin: 0 auto 10px auto; 
+}
+
+/* STYLIZACJA NAGŁÓWKA H1 (TYLKO TEKST) */
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #c00d6c; 
+}
+
+.hero h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #880e4f;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    color: #4a148c;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #e91e63; 
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #c2185b;
+}
+
+/* 2. STYLIZACJA SEKCJI OPISU WPROWADZAJĄCEGO (MAGIA SZYCIA) */
+.intro {
+    background-color: #fffde7; 
+    padding: 40px 20px;
+    text-align: center; 
+}
+
+.intro h3 {
+    font-size: 1.8em;
+    color: #9c27b0; 
+    margin-bottom: 20px;
+    font-weight: 700; 
+}
+
+.intro p {
+    color: #4a148c; /* Kolor reszty tekstu */
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto; 
+}
+
+.intro p strong {
+    color: #c00d6c; /* GŁÓWNY, FAJNY KOLOR (ciemny róż/burgund) */
+    font-weight: 900; 
+}
+
+
+/* 3. STYLIZACJA GALERII (PORTFOLIO) */
+.portfolio h3 {
+    font-size: 2em;
+    color: #4a148c; 
+    margin-bottom: 30px;
+    border-bottom: 2px solid #fce4ec; 
+    padding-bottom: 10px;
+}
+
+.galeria-grid {
+    display: grid;
+    /* GWARANTOWANE 4 KOLUMNY */
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    gap: 20px;
+    justify-content: center;
+}
+
+.galeria-item {
+    text-align: center;
+    background-color: #ffffff; 
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.galeria-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: auto; 
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.galeria-item h4 {
+    /* KLUCZOWA POPRAWKA DLA WIDOCZNOŚCI PODPISÓW */
+    color: #880e4f; /* Ciemny, widoczny kolor */
+    font-size: 1em;
+    margin: 5px 0 0 0;
+    font-weight: bold;
+}
+
+/* 4. SEKCJA O MNIE */
+.about-me {
+    background-color: #fff8e1; 
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.about-me h3 {
+    color: #d84315; 
+    margin-bottom: 20px;
+}
+
+.about-me p {
+    color: #4a148c; 
+    max-width: 700px;
+    margin: 10px auto;
+    line-height: 1.7;
+}
+
+/* 5. SEKCJA KONTAKT */
+.contact {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e8f5e9; 
+    border-radius: 10px;
+}
+
+.contact h3 {
+    color: #388e3c;
+    margin-bottom: 20px;
+}
+
+.contact-links {
+    margin-top: 20px;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.social-link:hover {
+    background-color: #388e3c;
+}
+
+/* 6. STOPKA */
+footer {
+    background-color: #4a148c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+}
+
+/* ZŁAMANIE DLA RÓŻNYCH EKRANÓW (RESPONSIVE) */
+@media (max-width: 768px) {
+    .galeria-grid {
+        /* Zmień na 2 kolumny na małych ekranach */
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria-grid {
+        /* Zmień na 1 kolumnę na telefonach */
+        grid-template-columns: 1fr;
+    }
+}
